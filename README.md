@@ -22,6 +22,9 @@ You can also map cache data: ` -v /path/to/data:/var/spool/squid`
 * SSL-Bump peaking (*no interception - just read target hostnames for filtering*)
 * Allow connections only from private IPv4 ranges and localhost
 * Allow connections to 80/443
+* Deny weak inbound and outbound ciphers
+* Deny connections to servers with bad certificates
+* Deny HTTP-Connect tunnels through proxy
 
 ## Testing
 
