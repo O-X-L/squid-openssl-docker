@@ -7,8 +7,15 @@ bash scripts/build.sh
 
 Run container
 ```bash
-docker run --name squid local/squid
+# interactively
+docker run -p 3128:3128 --name squid local/squid
+# daemon
+docker run -d -p 3128:3128 --restart unless-stopped --name squid local/squid
 ```
+
+You can map your custom config: `-v /path/to/main/config:/etc/squid/squid.conf`
+
+You can also map cache data: ` -v /path/to/data:/var/spool/squid`
 
 ## Default config
 
