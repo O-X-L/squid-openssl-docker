@@ -30,11 +30,11 @@ You can also map cache data: ` -v /path/to/data:/var/spool/squid`
 
 ```bash
 http_proxy=http://127.0.0.1:3128 curl -v http://superstes.eu
-> TCP_MISS/301 478 GET http://superstes.eu/ - HIER_DIRECT/135.181.170.219 text/html
+> TCP_MISS/301 478 GET http://superstes.eu/ - HIER_DIRECT/superstes.eu text/html
 
 https_proxy=http://127.0.0.1:3128 curl -v https://superstes.eu
 > NONE_NONE/200 0 CONNECT superstes.eu:443 - HIER_NONE/- -
-> TCP_TUNNEL/200 6178 CONNECT superstes.eu:443 - HIER_DIRECT/135.181.170.219 -
+> TCP_TUNNEL/200 6178 CONNECT superstes.eu:443 - HIER_DIRECT/superstes.eu -
 ```
 
 ## Custom paths
